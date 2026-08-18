@@ -83,7 +83,7 @@ export default function Navbar({ onOpenQuote }) {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className={`px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider transition-all duration-200 ${
+                    className={`px-2.5 xl:px-3 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider whitespace-nowrap transition-all duration-200 ${
                       isActive
                         ? 'text-primary bg-primary/10 border border-primary/20'
                         : 'text-on-surface/75 hover:text-white hover:bg-white/5'

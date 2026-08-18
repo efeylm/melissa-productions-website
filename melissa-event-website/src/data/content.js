@@ -1,9 +1,9 @@
 export const SITE_CONFIG = {
   name: "Melissa Production & Organization",
   shortName: "Melissa Production",
-  phone: "+90 532 123 45 67",
-  phoneDisplay: "+90 (532) 123 45 67",
-  whatsappNumber: "905321234567",
+  phone: "+90 544 278 23 97",
+  phoneDisplay: "+90 (544) 278 23 97",
+  whatsappNumber: "905442782397",
   email: "info@melissaproduction.com",
   locations: ["Bursa", "İstanbul", "Marmara Bölgesi", "Tatil & Turizm Merkezleri"],
   address: "Nilüfer, Bursa & Beşiktaş, İstanbul",
