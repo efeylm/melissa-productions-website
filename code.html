@@ -1,0 +1,474 @@
+<!DOCTYPE html><html class="dark" lang="tr" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Melissa Production &amp; Organization</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Montserrat:wght@600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#8d90a0",
+                        "primary": "#b4c5ff",
+                        "on-background": "#e1e2e7",
+                        "error-container": "#93000a",
+                        "surface-dim": "#111417",
+                        "on-secondary-fixed": "#25005a",
+                        "surface": "#111417",
+                        "error": "#ffb4ab",
+                        "surface-container-low": "#191c1f",
+                        "primary-fixed": "#dbe1ff",
+                        "inverse-primary": "#0053db",
+                        "on-tertiary": "#002e6a",
+                        "on-tertiary-fixed": "#001a42",
+                        "surface-container-lowest": "#0c0e12",
+                        "on-error": "#690005",
+                        "on-surface": "#e1e2e7",
+                        "outline-variant": "#434655",
+                        "surface-tint": "#b4c5ff",
+                        "surface-container-highest": "#323539",
+                        "primary-fixed-dim": "#b4c5ff",
+                        "on-secondary-fixed-variant": "#5a00c6",
+                        "inverse-on-surface": "#2e3134",
+                        "primary-container": "#2563eb",
+                        "on-primary-fixed": "#00174b",
+                        "secondary": "#d2bbff",
+                        "background": "#111417",
+                        "on-primary": "#002a78",
+                        "tertiary-fixed": "#d8e2ff",
+                        "on-primary-fixed-variant": "#003ea8",
+                        "secondary-fixed": "#eaddff",
+                        "secondary-container": "#6001d1",
+                        "surface-variant": "#323539",
+                        "on-secondary": "#3f008e",
+                        "on-primary-container": "#eeefff",
+                        "surface-container-high": "#282a2e",
+                        "tertiary-fixed-dim": "#adc6ff",
+                        "on-tertiary-container": "#edf0ff",
+                        "on-tertiary-fixed-variant": "#004395",
+                        "inverse-surface": "#e1e2e7",
+                        "secondary-fixed-dim": "#d2bbff",
+                        "tertiary-container": "#0f69dc",
+                        "tertiary": "#adc6ff",
+                        "on-secondary-container": "#c9aeff",
+                        "surface-container": "#1d2023",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#37393d",
+                        "on-surface-variant": "#c3c6d7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-desktop": "120px",
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        "section-gap-mobile": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Montserrat"],
+                        "headline-lg": ["Montserrat"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Montserrat"],
+                        "label-sm": ["Inter"],
+                        "headline-lg-mobile": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "76px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(25, 28, 31, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(180, 197, 255, 0.1);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #b4c5ff 0%, #d2bbff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #2563eb 0%, #6001d1 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-gradient:hover {
+            box-shadow: 0 0 20px rgba(96, 1, 209, 0.4);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-lg antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Background Shader -->
+<div class="fixed inset-0 z-0 pointer-events-none opacity-30 mix-blend-screen">
+<!-- STITCH_SHADER_START:ANIMATION_3 class="absolute inset-0 w-full h-full" -->
+<div class="absolute inset-0 w-full h-full" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_3" style="display:block;width:100%;height:100%" width="1280" height="4122"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_3');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+
+// Simplex noise for organic movement
+vec3 permute(vec3 x) { return mod(((x*34.0)+1.0)*x, 289.0); }
+float snoise(vec2 v){
+  const vec4 C = vec4(0.211324865405187, 0.366025403784439,
+           -0.577350269189626, 0.024390243902439);
+  vec2 i  = floor(v + dot(v, C.yy) );
+  vec2 x0 = v -   i + dot(i, C.xx);
+  vec2 i1;
+  i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+  vec4 x12 = x0.xyxy + C.xxzz;
+  x12.xy -= i1;
+  i = mod(i, 289.0);
+  vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 ))
+  + i.x + vec3(0.0, i1.x, 1.0 ));
+  vec3 m = max(0.5 - vec4(dot(x0,x0), dot(x12.xy,x12.xy),
+    dot(x12.zw,x12.zw), 0.0), 0.0);
+  m = m*m ;
+  m = m*m ;
+  vec3 x = 2.0 * fract(p * C.www) - 1.0;
+  vec3 h = abs(x) - 0.5;
+  vec3 a0 = x - floor(x + 0.5);
+  m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+  vec3 g;
+  g.x  = a0.x  * x0.x  + h.x  * x0.y;
+  g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+  return 130.0 * dot(m, g);
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create a flowing, cinematic gradient
+    float n1 = snoise(uv * 1.5 + u_time * 0.1);
+    float n2 = snoise(uv * 2.5 - u_time * 0.08);
+    float n3 = snoise(uv * 3.5 + u_time * 0.05);
+    
+    // Colors from design system: Dark Navy (#05070A), Royal Blue (#2563EB), Rich Purple (#7C3AED)
+    vec3 color1 = vec3(0.02, 0.03, 0.04); // Navy
+    vec3 color2 = vec3(0.15, 0.39, 0.92); // Blue
+    vec3 color3 = vec3(0.49, 0.23, 0.93); // Purple
+    
+    vec3 finalColor = mix(color1, color2, n1 * 0.5 + 0.5);
+    finalColor = mix(finalColor, color3, n2 * 0.4);
+    finalColor += n3 * 0.05; // Add some highlights
+    
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_3 -->
+</div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-xl border-b border-white/10 shadow-2xl transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center px-margin-mobile md:px-gutter max-w-container-max mx-auto h-20">
+<a class="font-headline-md text-headline-md font-bold text-primary tracking-tight" href="#"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbgqj3t_dU0itdEpzflLFhq8B5WYb9ANPmqP4gJ2xeOXnVQN1hYcTBIJVj1XP85JTuWAlbBemQSPF-lp1pcupxHkOgwelzEp_9olkCheCSfG1qa5jW-t6p-FhIHyEhQhOBYiim5hwftE8XLG1bmNi50Ocn5rebvN9MNChH9KyHDNNPhJUffZSngDNC5xml0UBbu8fcH7qRlydhQ-t066-eFYFoOdd9UcFOFmcFIxx-3c8pv84vxXOTre27yXeYBN4L" alt="Melissa Productions Logo" class="h-10 w-auto inline-block mr-3 align-middle">Melissa Production</a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex space-x-8 items-center">
+<li class=""><a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90" href="#hero">Ana Sayfa</a></li>
+<li class=""><a class="text-on-surface/80 hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90" href="#about">Hakkımızda</a></li>
+<li class=""><a class="text-on-surface/80 hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90" href="#services">Hizmetler</a></li>
+<li class=""><a class="text-on-surface/80 hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90" href="#bands">Bandolarımız</a></li>
+<li class=""><a class="text-on-surface/80 hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all duration-300 scale-95 active:scale-90" href="#orchestras">Orkestralarımız</a></li>
+</ul>
+<div class="flex items-center space-x-4">
+<a class="hidden md:inline-flex btn-gradient px-6 py-3 rounded-full text-white font-label-sm text-label-sm uppercase tracking-widest items-center gap-2 scale-95 active:scale-90 transition-transform" href="#contact">
+<span class="">Teklif Al</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<button class="md:hidden text-on-surface hover:text-primary transition-colors" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-[28px]">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="relative z-10">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background z-10"></div>
+<img alt="" class="w-full h-full object-cover object-center scale-105 transform transition-transform duration-[20s] ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4yK0MlzMriLiW_j1D40NfDACHFwP9tDmZQYkd-zgkw6zaHHcszbW1g__580LK4H-cxVHXA2HRFLBfUsMpWT8u1NVPsCSzX2335zuU-ojJ83rB0GyHTmt4Fmx7kV-LINQPD5wZPPr65AS34nxT4EZavat6mkwD1NrciIu0rr5_mHXbcbEYYXVYAydhH5GFzSyMZI_1FyDUyB02swetMPBCWuDKKiY4qUT6ah6r1kwMBDZa4VHvaGQ">
+</div>
+<div class="relative z-20 max-w-container-max mx-auto px-margin-mobile md:px-gutter text-center reveal active">
+<div class="flex justify-center mb-6"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5W06hhjmH-fxlqF6zAxjBOlvI-ncdWKEYUDn-U7MO8Awub91TlNz7siS6m0O1czcTc-HnolByqYN-T3rOYr6EZAxtAc9fVWycfDWwHPH-EkAGQ0a_C8APMnlF6_NPrpF_1TtuqFW1iu3pV_ofGuPPqelfuvAjISPR3pv9xJe8BWugbOKAJmypEhzouCpaWKAMsVPE57qwJfHnStZXKunnE3QzwP9XUUsUZQNx_KwDIqKnjRBaBlBOzd2U-nvSONXp" alt="Melissa Brand Mark" class="h-20 w-auto opacity-80"></div><span class="inline-block px-4 py-1.5 rounded-full glass-panel font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-6">Premium Events</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white mb-6 max-w-4xl mx-auto drop-shadow-2xl">
+                    Etkinlikleri <span class="text-gradient">Performansa</span> Dönüştürüyoruz.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Kurumsal etkinliklerden özel davetlere, profesyonel orkestralara kadar her organizasyona özel müzik ve performans deneyimleri tasarlıyoruz.
+                </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="btn-gradient w-full sm:w-auto px-8 py-4 rounded-full text-white font-label-sm text-label-sm uppercase tracking-widest flex items-center justify-center gap-2" href="#services">
+                        Hizmetleri Keşfet
+                    </a>
+<a class="w-full sm:w-auto px-8 py-4 rounded-full glass-panel text-white font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/10 transition-colors flex items-center justify-center gap-2 border border-white/20" href="#contact">
+<span class="material-symbols-outlined text-[18px]">play_circle</span>
+                        Showreel İzle
+                    </a>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">
+<span class="material-symbols-outlined text-[32px]">keyboard_arrow_down</span>
+</a>
+</div>
+</section>
+<!-- Services Preview Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest relative" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter">
+<div class="text-center mb-16 reveal active">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Hizmetlerimiz</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Her detayı özenle düşünülmüş, unutulmaz performanslar.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Service Card 1 -->
+<div class="glass-panel p-8 rounded-2xl group hover:border-primary/30 transition-all duration-300 reveal active">
+<div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-[24px]">corporate_fare</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Kurumsal Etkinlikler</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Markanızın vizyonunu yansıtan prestijli performanslar.</p>
+</div>
+<!-- Service Card 2 -->
+<div class="glass-panel p-8 rounded-2xl group hover:border-primary/30 transition-all duration-300 reveal delay-100 active">
+<div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-[24px]">music_note</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Orkestralar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Senfonikten caza, her konsepte uygun profesyonel kadrolar.</p>
+</div>
+<!-- Service Card 3 -->
+<div class="glass-panel p-8 rounded-2xl group hover:border-primary/30 transition-all duration-300 reveal delay-200 active">
+<div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-[24px]">celebration</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-3">Bando Performansları</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Enerjisi yüksek, interaktif ve görkemli gösteriler.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Bands Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-background relative overflow-hidden" id="bands">
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal active">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-4 block">Öne Çıkanlar</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">Bandolarımız</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Band 1 -->
+<div class="group relative rounded-2xl overflow-hidden aspect-[4/3] reveal active">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+<img alt="" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDg8LkB8VJ8UrA_GfwH9aj_TsgCGAAYuIR8HPY8pUXJUI1u9VdxnE0NXvnefWpwtPa0rZRNpt7E3E6gTXdQbJbFeidlWxJMhlVvPkMGOdMAhaEnN5BYXNzdIl1Idzr2HXnJfzhgd4CW55zFgdE0Us_U8vdZR7p5tjmtfdaTy15eLHUDez-aWBLXgHue6yxRtFyang_-loaiiYKA6EsDdBc4Bfvrt-KphDmdNAQa3zQEVHioiB2XK4">
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-md mb-2">Ayyıldız Bandosu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Prestijli ve görkemli kurumsal performanslar.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest hover:text-white transition-colors" href="#">
+                                Detaylı İncele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Band 2 -->
+<div class="group relative rounded-2xl overflow-hidden aspect-[4/3] reveal delay-100 active">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+<img alt="" class="absolute inset-0 w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzAIu2cwns3LqSNPcUevDY7x-UrrxvxOclgX81aEoam6sUf72snleExWuQm-f2a5SjsGsS3BC1-aRB_A-K69FZMXBvgSRHq9bQOcLVqraRyDp1bwkGdo7-8c9kF3bXR5lrm1DGVje-JKv6s-KG_9OCM1RgFJXqvUdbZDmHr730XKaKHuoTmptRt1txN26tMpLx58uIqBHAHaHyc8J5ACbC07p24tmucH2nDJr0pBMhmH323rnB7qQ">
+<div class="absolute bottom-0 left-0 p-8 z-20 w-full">
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-md mb-2">Bando Fenomeno</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">Dinamik, interaktif ve modern şovlar.</p>
+<a class="inline-flex items-center gap-2 text-primary font-label-sm text-label-sm uppercase tracking-widest hover:text-white transition-colors" href="#">
+                                Detaylı İncele <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DJ & Live Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop relative bg-surface-container-low overflow-hidden" id="dj">
+<div class="absolute inset-0 z-0 opacity-40">
+<img alt="" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTO3WXAN2MH4ICTuib0wm-Ht0IVQyBKi6ZcDy0f9SxA9x0k81lImaqR9WFAmnd7tmV6UR5Gx9Ui1k_UX0KLwLqf6_TuYKRZgrT4ScgmQrPbM-ui20IUJPdIUZrJQ-SxCm69MUHr8MaXg6YNiOKLuh5s0D0jHT0GvL7XxMqHnvOMUwjTjNY6hKI6RWhVU0efVBlW287eHbFWzZunIvRD0AHR7MGAiHNtCuWniuOSLvc5mIuwuzgwaI">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 flex items-center min-h-[60vh]">
+<div class="max-w-2xl reveal active">
+<span class="inline-block px-4 py-1.5 rounded-full glass-panel font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-6">DJ &amp; Live</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6 leading-tight">
+                        DJ Performansı, Canlı Müziğin Enerjisiyle.
+                    </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Modern elektronik altyapıları, saksafon ve perküsyon gibi canlı enstrümanlarla harmanlayarak sıra dışı bir atmosfer yaratıyoruz.
+                    </p>
+<a class="btn-gradient inline-flex px-8 py-4 rounded-full text-white font-label-sm text-label-sm uppercase tracking-widest items-center gap-2" href="#contact">
+                        Konsept Oluştur <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-section-gap-mobile md:py-section-gap-desktop bg-surface-container-lowest relative overflow-hidden text-center" id="contact">
+<div class="absolute inset-0 bg-primary/5 blur-[100px] rounded-full w-[600px] h-[600px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-gutter relative z-10 reveal active">
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg mb-6">Bir Sonraki Etkinliğinizi Birlikte Tasarlayalım.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Detayları konuşmak ve size özel bir teklif almak için bizimle iletişime geçin.</p>
+<a class="btn-gradient inline-flex px-10 py-5 rounded-full text-white font-headline-md text-body-lg items-center justify-center gap-3 w-full sm:w-auto shadow-[0_0_40px_rgba(37,99,235,0.3)] hover:shadow-[0_0_60px_rgba(37,99,235,0.5)] transition-all" href="#">
+<span class="material-symbols-outlined text-[24px]">chat</span>
+                    WhatsApp ile İletişime Geç
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 py-section-gap-mobile md:py-section-gap-desktop">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter flex flex-col md:flex-row justify-between items-center space-y-8 md:space-y-0">
+<div class="font-headline-md text-headline-md text-on-surface">Melissa Production</div>
+<ul class="flex flex-wrap justify-center gap-6 font-body-md text-body-md">
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">KVKK</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Gizlilik Politikası</a></li>
+<li class=""><a class="text-on-surface-variant hover:text-secondary transition-colors opacity-80 hover:opacity-100" href="#">Kullanım Koşulları</a></li>
+</ul>
+<div class="font-body-md text-body-md text-on-surface-variant opacity-60">
+                © 2024 Melissa Production &amp; Organization. Tüm Hakları Saklıdır.
+            </div>
+</div>
+</footer>
+<script>
+        // Reveal Animations on Scroll
+        document.addEventListener('DOMContentLoaded', () => {
+            const reveals = document.querySelectorAll('.reveal');
+            
+            const revealOnScroll = () => {
+                const windowHeight = window.innerHeight;
+                const elementVisible = 100;
+                
+                reveals.forEach((reveal) => {
+                    const elementTop = reveal.getBoundingClientRect().top;
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveal.classList.add('active');
+                    }
+                });
+            };
+            
+            window.addEventListener('scroll', revealOnScroll);
+            revealOnScroll(); // Trigger on load
+            
+            // Navbar Scroll Effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-2xl', 'bg-surface/80');
+                    navbar.classList.remove('bg-surface/60');
+                } else {
+                    navbar.classList.remove('shadow-2xl', 'bg-surface/80');
+                    navbar.classList.add('bg-surface/60');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>
