@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Sparkles } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
+import logoYatayGala from '../assets/11-yatay-gala-lacivert.svg';
+import whatsappIcon from '../assets/whatsapp-whats-app-svgrepo-com.svg';
 
 export default function Navbar({ onOpenQuote }) {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,23 +58,13 @@ export default function Navbar({ onOpenQuote }) {
           {/* Logo & Brand */}
           <a
             href="#hero"
-            className="flex items-center gap-3 group focus:outline-none"
+            className="flex items-center group focus:outline-none"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-0.5 shadow-lg group-hover:scale-105 transition-transform">
-              <div className="w-full h-full bg-[#090c10] rounded-[10px] flex items-center justify-center">
-                <span className="font-display font-black text-xl text-primary group-hover:text-white transition-colors">
-                  M
-                </span>
-              </div>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-display font-bold text-lg text-white tracking-tight leading-none group-hover:text-primary transition-colors">
-                Melissa Production
-              </span>
-              <span className="text-[10px] text-secondary font-medium tracking-widest uppercase mt-0.5">
-                &amp; Organization
-              </span>
-            </div>
+            <img
+              src={logoYatayGala}
+              alt="Melissa Production & Organization"
+              className="h-10 sm:h-12 w-auto object-contain rounded-xl border border-white/10 shadow-lg group-hover:scale-105 group-hover:border-primary/40 transition-all duration-300 filter drop-shadow-[0_0_12px_rgba(242,206,120,0.3)]"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -131,10 +123,12 @@ export default function Navbar({ onOpenQuote }) {
           {/* Menu Drawer */}
           <div className="fixed top-20 right-0 bottom-0 w-4/5 max-w-sm bg-[#111417]/95 backdrop-blur-2xl border-l border-white/10 p-6 flex flex-col justify-between shadow-2xl animate-in slide-in-from-right duration-300">
             <div className="space-y-6">
-              <div className="border-b border-white/10 pb-4">
-                <span className="text-xs font-semibold text-secondary uppercase tracking-widest block">
-                  Gezinme Menüsü
-                </span>
+              <div className="border-b border-white/10 pb-4 flex items-center justify-center">
+                <img
+                  src={logoYatayGala}
+                  alt="Melissa Production & Organization"
+                  className="h-12 w-auto object-contain rounded-xl border border-white/10 filter drop-shadow-[0_0_10px_rgba(242,206,120,0.4)]"
+                />
               </div>
               <ul className="space-y-2">
                 {navLinks.map((link) => (
@@ -167,9 +161,10 @@ export default function Navbar({ onOpenQuote }) {
                 href={`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Merhaba,%20etkinlik%20organizasyonu%20hakkında%20bilgi%20almak%20istiyorum.`}
                 target="_blank"
                 rel="noreferrer"
-                className="w-full py-3 rounded-xl glass-panel text-center text-xs font-medium text-secondary hover:text-white block transition-colors"
+                className="w-full py-3 rounded-xl glass-panel text-center text-xs font-medium text-secondary hover:text-white flex items-center justify-center gap-2 transition-colors"
               >
-                WhatsApp Doğrudan Destek
+                <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
+                <span>WhatsApp Doğrudan Destek</span>
               </a>
             </div>
           </div>

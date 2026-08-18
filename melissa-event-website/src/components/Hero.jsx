@@ -1,5 +1,6 @@
 import { Play, ArrowDown, Sparkles, Music2, ShieldCheck, MapPin } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
+import logoYatayGala from '../assets/11-yatay-gala-lacivert.svg';
 
 export default function Hero({ onOpenShowreel, onOpenQuote }) {
   return (
@@ -13,6 +14,18 @@ export default function Hero({ onOpenShowreel, onOpenQuote }) {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
         
+        {/* Brand Horizontal Logo */}
+        <div className="mb-8 flex justify-center">
+          <div className="relative group max-w-[280px] sm:max-w-[360px]">
+            <div className="absolute -inset-2 bg-gradient-to-r from-primary/30 via-secondary/30 to-primary/30 rounded-2xl blur-xl opacity-60 group-hover:opacity-100 transition-opacity" />
+            <img
+              src={logoYatayGala}
+              alt="Melissa Production & Organization"
+              className="relative w-full h-auto rounded-2xl border border-white/15 shadow-2xl filter drop-shadow-[0_0_25px_rgba(242,206,120,0.35)] group-hover:scale-[1.02] transition-transform duration-500"
+            />
+          </div>
+        </div>
+
         {/* Top Eyebrow Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-panel border border-primary/20 mb-8 animate-fade-in shadow-xl backdrop-blur-xl">
           <Sparkles className="w-4 h-4 text-primary animate-pulse" />

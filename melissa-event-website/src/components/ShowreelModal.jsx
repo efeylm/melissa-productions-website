@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { X, Sparkles, Volume2, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
+import emblemGold from '../assets/01-amblem-BUYUK-altin-seffaf.svg';
 
 export default function ShowreelModal({ isOpen, onClose, onOpenQuote }) {
   useEffect(() => {
@@ -34,8 +35,12 @@ export default function ShowreelModal({ isOpen, onClose, onOpenQuote }) {
       >
         {/* Header bar */}
         <div className="flex items-center justify-between p-5 border-b border-white/10">
-          <div className="flex items-center gap-2">
-            <Sparkles className="w-4 h-4 text-primary" />
+          <div className="flex items-center gap-3">
+            <img
+              src={emblemGold}
+              alt="Melissa Logo"
+              className="h-6 w-auto object-contain filter drop-shadow-[0_0_6px_rgba(242,206,120,0.5)]"
+            />
             <span className="font-display font-bold text-sm sm:text-base text-white">
               Melissa Production Showreel 2026
             </span>

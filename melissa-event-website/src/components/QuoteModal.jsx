@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { X, Send, Sparkles, Phone, MessageSquare, CheckCircle, Calendar, MapPin, Users } from 'lucide-react';
 import { SITE_CONFIG, SERVICES } from '../data/content';
+import emblemGold from '../assets/01-amblem-BUYUK-altin-seffaf.svg';
+import whatsappIcon from '../assets/whatsapp-whats-app-svgrepo-com.svg';
 
 export default function QuoteModal({ isOpen, onClose, preselectedService }) {
   const [formData, setFormData] = useState({
@@ -93,8 +95,8 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }) {
                 rel="noreferrer"
                 className="btn-gradient px-6 py-3 rounded-full text-xs font-semibold uppercase tracking-wider text-white inline-flex items-center justify-center gap-2"
               >
-                <MessageSquare className="w-4 h-4" />
-                WhatsApp'ta Aç
+                <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
+                <span>WhatsApp'ta Aç</span>
               </a>
               <button
                 onClick={onClose}
@@ -108,11 +110,18 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }) {
           <div>
             {/* Header */}
             <div className="mb-6 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-primary/20 mb-2">
-                <Sparkles className="w-3.5 h-3.5 text-primary" />
-                <span className="text-[11px] font-semibold text-secondary uppercase tracking-widest">
-                  Hızlı Teklif &amp; Konsept Planlama
-                </span>
+              <div className="flex items-center gap-3 mb-3">
+                <img
+                  src={emblemGold}
+                  alt="Melissa Logo"
+                  className="h-8 w-auto object-contain filter drop-shadow-[0_0_8px_rgba(242,206,120,0.5)]"
+                />
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full glass-panel border border-primary/20">
+                  <Sparkles className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-[11px] font-semibold text-secondary uppercase tracking-widest">
+                    Hızlı Teklif &amp; Konsept Planlama
+                  </span>
+                </div>
               </div>
               <h3 className="font-display font-bold text-2xl sm:text-3xl text-white tracking-tight">
                 Etkinliğinizi Birlikte Tasarlayalım
@@ -249,7 +258,7 @@ export default function QuoteModal({ isOpen, onClose, preselectedService }) {
                 type="submit"
                 className="w-full btn-gradient py-3.5 rounded-xl text-white font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-xl hover:shadow-2xl active:scale-95 transition-all cursor-pointer mt-2"
               >
-                <MessageSquare className="w-4 h-4" />
+                <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
                 <span>WhatsApp ile Teklif İste</span>
               </button>
 

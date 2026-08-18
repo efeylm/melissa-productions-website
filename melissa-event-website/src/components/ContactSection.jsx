@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Phone, MessageSquare, Mail, MapPin, Sparkles, Send, CheckCircle } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
+import whatsappIcon from '../assets/whatsapp-whats-app-svgrepo-com.svg';
 
 export default function ContactSection({ onOpenQuote }) {
   const [formState, setFormState] = useState({
@@ -54,7 +55,7 @@ export default function ContactSection({ onOpenQuote }) {
               rel="noreferrer"
               className="w-full sm:w-auto btn-gradient px-8 py-4 rounded-full text-white font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-3 shadow-[0_0_30px_rgba(37,99,235,0.4)] hover:shadow-[0_0_50px_rgba(96,1,209,0.6)] active:scale-95 transition-all"
             >
-              <MessageSquare className="w-5 h-5 fill-white/20" />
+              <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 object-contain" />
               <span>WhatsApp ile Hızlı Teklif Al</span>
             </a>
 
@@ -90,8 +91,8 @@ export default function ContactSection({ onOpenQuote }) {
             </div>
 
             <div className="glass-panel p-5 rounded-2xl border border-white/10 flex items-start gap-4">
-              <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
-                <Phone className="w-5 h-5" />
+              <div className="w-10 h-10 rounded-xl bg-[#25D366]/15 border border-[#25D366]/25 flex items-center justify-center shrink-0 p-1.5">
+                <img src={whatsappIcon} alt="WhatsApp" className="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(37,211,102,0.4)]" />
               </div>
               <div>
                 <h4 className="text-sm font-bold text-white">Telefon &amp; WhatsApp Hattı</h4>
@@ -185,7 +186,7 @@ export default function ContactSection({ onOpenQuote }) {
                   type="submit"
                   className="btn-gradient w-full py-3.5 rounded-xl text-white font-semibold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-all cursor-pointer"
                 >
-                  <Send className="w-4 h-4" />
+                  <img src={whatsappIcon} alt="WhatsApp" className="w-4 h-4 object-contain" />
                   <span>Mesajı Gönder (WhatsApp)</span>
                 </button>
               </form>

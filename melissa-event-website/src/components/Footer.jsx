@@ -1,5 +1,6 @@
 import { SITE_CONFIG } from '../data/content';
 import { ArrowUp, Phone, Mail, MapPin } from 'lucide-react';
+import logoYatayGala from '../assets/11-yatay-gala-lacivert.svg';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -14,21 +15,11 @@ export default function Footer() {
           
           {/* Brand Col */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center p-0.5 shadow-lg">
-                <div className="w-full h-full bg-[#090c10] rounded-[10px] flex items-center justify-center">
-                  <span className="font-display font-black text-xl text-primary">M</span>
-                </div>
-              </div>
-              <div>
-                <span className="font-display font-bold text-lg text-white tracking-tight block">
-                  {SITE_CONFIG.name}
-                </span>
-                <span className="text-[10px] text-secondary font-medium tracking-widest uppercase">
-                  Sahne &amp; Gösteri Sanatları
-                </span>
-              </div>
-            </div>
+            <img
+              src={logoYatayGala}
+              alt="Melissa Production & Organization"
+              className="h-12 w-auto object-contain rounded-xl border border-white/10 shadow-lg filter drop-shadow-[0_0_10px_rgba(242,206,120,0.3)]"
+            />
 
             <p className="text-xs sm:text-sm text-on-surface-variant leading-relaxed max-w-sm">
               Bursa, İstanbul ve tüm Marmara Bölgesi'nde kurumsal etkinlikler, resmi törenler, bando şovları ve seçkin orkestra prodüksiyonları.

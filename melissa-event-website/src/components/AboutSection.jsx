@@ -1,5 +1,6 @@
 import { Award, Users, Music, CheckCircle2, Globe, Sparkles } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
+import muhurLogo from '../assets/06-muhur-seffaf.svg';
 
 export default function AboutSection({ onOpenQuote }) {
   return (
@@ -21,6 +22,15 @@ export default function AboutSection({ onOpenQuote }) {
                   className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#090c10] via-transparent to-transparent opacity-80" />
+
+                {/* Official Brand Seal Badge */}
+                <div className="absolute top-5 right-5 w-16 h-16 sm:w-20 sm:h-20 rounded-full glass-panel border border-primary/30 p-2 shadow-2xl backdrop-blur-md">
+                  <img
+                    src={muhurLogo}
+                    alt="Melissa Production Resmi Mühür"
+                    className="w-full h-full object-contain filter drop-shadow-[0_0_10px_rgba(242,206,120,0.6)]"
+                  />
+                </div>
 
                 {/* Floating Experience Badge */}
                 <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl glass-panel-heavy border border-white/20 shadow-2xl backdrop-blur-xl">
