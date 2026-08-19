@@ -1,4 +1,4 @@
-import { Play, ArrowDown, Sparkles, Music2, ShieldCheck, MapPin } from 'lucide-react';
+import { Play, ArrowDown, Sparkles, Music2, ShieldCheck, MapPin, ArrowRight } from 'lucide-react';
 import { SITE_CONFIG } from '../data/content';
 import logoYatayGala from '../assets/11-yatay-gala-lacivert.svg';
 
@@ -50,11 +50,20 @@ export default function Hero({ onOpenShowreel, onOpenQuote }) {
 
         {/* Primary Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-14">
+          <button
+            onClick={onOpenQuote}
+            className="w-full sm:w-auto btn-gradient px-8 py-4 rounded-full text-white font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 cursor-pointer shadow-2xl active:scale-95 transition-all group"
+          >
+            <Sparkles className="w-4 h-4 text-white" />
+            <span>Teklif Al</span>
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </button>
+
           <a
             href="#services"
-            className="w-full sm:w-auto btn-gradient px-8 py-4 rounded-full text-white font-semibold text-sm uppercase tracking-wider flex items-center justify-center gap-2 shadow-2xl active:scale-95 transition-all"
+            className="w-full sm:w-auto px-8 py-4 rounded-full btn-glass text-white font-semibold text-sm uppercase tracking-wider hover:bg-white/10 transition-all flex items-center justify-center gap-2"
           >
-            <Music2 className="w-4 h-4" />
+            <Music2 className="w-4 h-4 text-primary" />
             <span>Hizmetleri Keşfet</span>
           </a>
 
