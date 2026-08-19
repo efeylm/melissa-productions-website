@@ -31,7 +31,7 @@ export default function App() {
   };
 
   return (
-    <div className="relative min-h-screen bg-[#090c10] text-[#e1e2e7] selection:bg-[#2563eb] selection:text-white">
+    <div className="relative min-h-screen bg-[#090c10] text-[#e1e2e7] selection:bg-[#2563eb] selection:text-white overflow-x-hidden w-full">
       {/* Interactive WebGL Shader Canvas Background */}
       <BackgroundShader />
 
